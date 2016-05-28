@@ -1,0 +1,11 @@
+#include"mybst.h"
+
+NODE * search(NODE * root, int num)
+{
+	if (num == root->key)
+		return root;
+	else if (num > root->key)
+		return search( root->right, num);
+	else 
+		return search(root->left, num);
+}

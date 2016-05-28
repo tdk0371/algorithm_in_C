@@ -1,0 +1,10 @@
+  
+
+
+spsp: spmain.o
+	g++ spmain.o -o spsp
+
+spmain.o: bellman.c dijkstra.c ini_queue.c queue.h en_queue.c spmain.c Makefile
+
+clean:
+	rm *o spsp

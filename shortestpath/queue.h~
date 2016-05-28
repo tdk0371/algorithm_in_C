@@ -1,0 +1,51 @@
+#ifndef QUEUE_H_
+#define QUEUE_H_
+
+
+#include<stdio.h>
+#include<stdlib.h>
+
+
+
+typedef struct vertex {
+			int id;                   //vertex number
+			struct vertex * next;     //used in bfs/dfs queue
+			struct vertex * pred;     //used in bellman/dijkstra
+			int discover;             //dfs discovered time
+			int finish;		  //dfs finish time 
+			int distance;             //weight from sourse
+			unsigned int color: 2;    //white/gray/black bit field
+			} VERTEX;
+
+#define WHITE 0
+#define GRAY  1
+#define BLACK 2
+
+typedef struct queue {
+			int length;    //queue length
+			struct vertex * head;
+			struct vertex * rear;
+			} QUEUE;
+
+
+typedef struct adjnode {
+			struct vertex * self;
+			struct adjnode * next;
+			} ADJNODE;                 //adj list
+			
+
+
+//adjacency list initialize
+ADJNODE * ini_adjlist();
+
+//queue initialize
+QUEUE * ini_queue();
+
+//insert in queue
+void en_queue(QUEUE *, VERTEX *);
+
+//delete from queue and return
+VERTEX * del_queue(QUEUE *); 
+
+
+#endif

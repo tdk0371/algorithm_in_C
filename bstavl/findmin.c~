@@ -1,0 +1,9 @@
+#include"mybst.h"
+
+NODE * findmini(NODE * root)
+{
+	if (root->left != NULL)
+		return findmini(root->left);
+	else 
+		return root;
+}

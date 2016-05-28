@@ -1,0 +1,14 @@
+#include"mybst.h"
+
+void bstinsert(NODE * root, int num)
+{
+	NODE * newnode;
+	newnode	
+
+
+
+
+
+
+
+}

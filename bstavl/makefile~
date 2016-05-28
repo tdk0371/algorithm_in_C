@@ -1,0 +1,2 @@
+all:
+	gcc mybst.h bstinitialize.c nodesearch.c bstfindmaxi.c bstfindmini.c bstinsert.c nextlarge.c nextsmaller.c mybst.c -o mybst
