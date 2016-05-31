@@ -1,5 +1,0 @@
-#include"mybst.h"
-
-
-
-void inorderwalk(NODE * root)
